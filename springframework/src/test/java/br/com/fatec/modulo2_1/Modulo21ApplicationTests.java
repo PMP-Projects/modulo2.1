@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.convert.MongoConverter;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
+import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
@@ -29,6 +31,12 @@ class Modulo21ApplicationTests {
 
     @Mock
     private MongoConverter mongoConverter;
+
+    @MockitoBean
+    private LettuceConnectionFactory redisConnectionFactory;
+
+    @MockitoBean
+    private RedisCacheManager redisCacheManager;
 
 	@Test
 	void contextLoads() {
