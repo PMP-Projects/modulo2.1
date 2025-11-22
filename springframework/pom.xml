@@ -10,12 +10,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>springframework</name>
-    <description>Framework Spring para cadastro de pokemon</description>
+    <description>Framework Spring para autenticação do módulo 2</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.3</version>
+        <version>3.5.4</version>
         <relativePath/>
     </parent>
 
@@ -31,11 +31,25 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Security (versão corrigida) -->
+        <!-- Spring Security (corrigido) -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>3.5.4</version>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>6.5.4</version>
+        </dependency>
+
+        <!-- Spring Core atualizado -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>6.2.11</version>
+        </dependency>
+
+        <!-- Tomcat Embed atualizado -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>10.1.44</version>
         </dependency>
 
         <!-- JWT -->
