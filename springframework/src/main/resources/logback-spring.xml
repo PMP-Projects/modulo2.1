@@ -1,4 +1,7 @@
 <configuration>
+    <property name="GELF_HOST" value="${GELF_HOST:127.0.0.1}" />
+    <property name="GELF_PORT" value="${GELF_PORT:12201}" />
+    <property name="SERVER_PORT" value="${SERVER_PORT:8080}" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -10,7 +13,7 @@
     <appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
         <graylogHost>${GELF_HOST}</graylogHost>
         <graylogPort>${GELF_PORT}</graylogPort>
-        <facility>pessoa-api</facility>
+        <facility>auth-api</facility>
         <includeRawMessage>true</includeRawMessage>
         <includeMdcData>true</includeMdcData>
     </appender>
