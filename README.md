@@ -21,7 +21,7 @@ Inclua o Dockerfile necessário para a construção da aplicação.
 
 | Projeto   | Descrição                         | Link do Repositório                                                |
 |-----------|-----------------------------------|--------------------------------------------------------------------|
-| Módulo 1  | API Rest com Crud Pessoa          | [Módulo 1](https://github.com/VekRest/vekrest-vekclient-modulo1)   |
+| Módulo 1  | API Rest com Crud Pessoa          | [Módulo 1](https://github.com/PMP-Projects/modulo1)   |
 | Módulo 2  | Gateway das aplicações do projeto | (em desenvolvimento)                                               |
 | Módulo 2.1 | API Rest de Login + Segurança     | Este Repositório                                                   
 
