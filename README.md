@@ -22,7 +22,7 @@ Inclua o Dockerfile necessário para a construção da aplicação.
 | Projeto   | Descrição                         | Link do Repositório                                                |
 |-----------|-----------------------------------|--------------------------------------------------------------------|
 | Módulo 1  | API Rest com Crud Pessoa          | [Módulo 1](https://github.com/PMP-Projects/modulo1)   |
-| Módulo 2  | Gateway das aplicações do projeto | (em desenvolvimento)                                               |
+| Módulo 2  | Gateway das aplicações do projeto | [Módulo 2](https://github.com/PMP-Projects/modulo2)                                               |
 | Módulo 2.1 | API Rest de Login + Segurança     | Este Repositório                                                   
 
 ---
@@ -124,12 +124,12 @@ A esteira CI/CD deste projeto é automatizada via Github Actions.
 2️⃣ Análise de qualidade de código com **Sonar Cloud**
 
 ---
-## Endpoints 
+## Endpoints
 
-| Método   | Endpoint             | Descrição                                |
-|----------|----------------------|------------------------------------------|
-| `POST`   | `/api/v1/auth/login` | Login do usuário criado para gerar token |
-| `POST`   | `/api/v1/user/save`  | Salvar conta inserindo usuário e senha   |
+| Método   | Endpoint                         | Descrição                                |
+|----------|----------------------------------|------------------------------------------|
+| `POST`   | `/modulo-auth/api/v1/auth/login` | Login do usuário criado para gerar token |
+| `POST`   | `/modulo-auth/api/v1/user/save`              | Salvar conta inserindo usuário e senha   |
 
 ### Exemplos de uso com cURL
 
@@ -139,24 +139,25 @@ A esteira CI/CD deste projeto é automatizada via Github Actions.
 
 ```bash 
 curl --request POST \
-  --url http://localhost:8082/api/v1/user/save \
+  --url http://localhost:8082/modulo-auth/api/v1/user/save \
   --header 'Content-Type: application/json' \
   --data '{
   "username": "juliuses",
   "password": "123456"
-}'
+}
+'
 ````
 
 #### Login
 
 ```bash 
 curl --request POST \
-  --url http://localhost:8082/api/v1/auth/login \
+  --url http://localhost:8082/modulo-auth/api/v1/auth/login \
   --header 'Content-Type: application/json' \
   --data '{
   "username": "juliuses",
   "password": "123456"
-}
+}'
 '
 ````
 
